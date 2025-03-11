@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.mapper.EventMapper">
+	<select id="find" resultType="com.example.app.domain.Event">
+		SELECT * FROM events 
+	</select>
+	
+	<update id="update" parameterType="com.example.app.domain.Event">
+		UPDATE events 
+		SET title=#{title},
+			date=#{date},
+			treatment=#{treatment},
+			gift=#{gift}
+		WHERE id=#{id}
+	</update>
+</mapper>

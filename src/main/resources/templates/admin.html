@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="「毎日の健康な素肌を保つ
+お手伝い」をコンセプトに日々の素肌のお手入れをご提案する「suhada」化粧品。
+健康管理の一環として取り入れられるスキンケアをお試しください">
+	<meta name="keywords" content="suhada,健康,揺らぎ肌,日々のお手入れ">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Events</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lavishly+Yours&display=swap"
+		rel="stylesheet">
+</head>
+
+
+</head>
+
+<body>
+	<div class="container bg-white">
+		<form action="" method="post">
+			<input type="hidden" name="id" th:value="${event.id}">
+			<h2 class="eventh1">Events(管理者ページ)</h2>
+
+			<h3 id="イベント名">イベント名
+				<input type="text" th:value="${event.title}" name="title">
+			</h3>
+
+			<img th:src="@{/images/face-front.png}">
+
+			<h3 id="イベント日程">イベント日程</h3>
+			<input type="text" th:value="${event.date}" name="date"></td>
+
+
+			<h3 id="トリートメント内容">トリートメント内容</h3>
+			<textarea cols="50" rows="10" name="treatment">
+			 [[${event.treatment}]]</textarea>
+
+
+
+			<h3 id="ギフト">ギフト</h3>
+			<textarea cols="50" rows="5" name="gift">
+			       [[${event.gift}]]
+			      </textarea>
+			<br>
+
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			<div class="navigation-bar d-flex align-items-center">
+				<form class="mx-1">
+					<input type="submit" value="更新" class="btn btn-success">
+				</form>
+				<p class="mx-1"><a th:href="@{/event}" class="btn btn-success">閲覧ページへ</a></p>
+				<a th:href="@{/logout}" class="btn btn-success mx-1">ログアウト</a>
+			</div>
+</body>
+
+</html>

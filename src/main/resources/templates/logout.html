@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログアウト</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link th:href="@{/css/style.css}"rel="stylesheet">
+</head>
+<body>
+<header class="admin-header">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <h1 class="logouth1">Events</h1>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="container admin-container">
+  <main>
+    <h2 class="logouth2">ログアウト完了</h2>
+    <p><a th:href="@{/login}">ログインページに戻る</a></p>
+  </main>
+</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

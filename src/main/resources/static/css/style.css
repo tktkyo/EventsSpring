@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+.image-container {
+	position: relative;
+	/* 子要素の基準位置を設定 */
+	display: inline-block;
+	/* インラインブロック要素として表示 */
+}
+
+.base-image {
+	position: relative;
+	/* 必要に応じて設定 */
+	z-index: 1;
+	/* 重なり順を設定（下） */
+}
+
+.overlay-image {
+	position: absolute;
+	top: 50%;
+	/* 上からの位置を50%に設定 */
+	left: 50%;
+	/* 左からの位置を50%に設定 */
+	transform: translate(-50%, -50%);
+	/* 中央に配置 */
+
+	width: calc(100% - 90px);
+	/*幅を10px小さく*/
+	/* 親要素に合わせて幅を設定 */
+	height: calc(100% - 90px);
+	/* 親要素に合わせて高さを設定 */
+	z-index: 2;
+	/* 重なり順を設定（上） */
+}
+
+.evh1 {
+	color: rgb(64, 128, 128)
+}
+
+input[name="title"] {
+
+
+	font-family: "Dancing Script", cursive;
+	/* Dancing Script フォントを適用 */
+
+	font-size: 100px;
+	font-weight: normal;
+
+
+	color: rgb(87, 189, 251);
+	border: none;
+	/* または border: 0; */
+
+}
+
+.h2 {
+
+	color: rgb(4, 194, 194);
+}
+
+.evh2 {
+	color: rgb(157, 255, 255);
+}
+
+input[name="date"] {
+	color: rgb(0, 191, 115);
+	border: none;
+	/* または border: 0; */
+}
+
+.eventh1 {
+	color: rgb(4, 194, 194);
+
+}
+
+.eventh2 {
+
+	font-family: "Kaisei Decol", serif;
+	font-weight: 400;
+	font-style: normal;
+
+	font-style: oblique;
+	color: rgb(0, 191, 115);
+}
+
+textarea[name="treatment"] {
+	color: green;
+	border: none;
+	/* または border: 0; */
+}
+
+textarea[name="gift"] {
+	color: green;
+	border: none;
+	/* または border: 0; */
+}
+
+adh2 {
+	color: rgb(13, 77, 24);
+	font-weight: 400;
+}
+
+h3 {
+	color: rgb(4, 194, 194);
+}
+
+
+th {
+	color: rgb(163, 163, 231);
+}
+
+.loginh1 {
+	color: rgb(25, 109, 109);
+	text-shadow: 30cap;
+	font-weight: 400;
+}
+
+.login_title {
+	color: rgb(5, 151, 103);
+}
+
+.loginh2 {
+	color: rgb(3, 138, 93)
+}
+
+.loginp1 {
+	color: rgb(5, 129, 88);
+}
+
+.alert {
+	color: rgb(5, 160, 108);
+}
+
+.btn {
+	color: rgb(3, 107, 47);
+	background-color: rgb(165, 219, 172);
+}
+
+.logouth1 {
+	color: rgb(5, 131, 89);
+	font-weight: 400;
+}
+
+.logouth2 {
+	color: rgb(3, 141, 141);
+}
+
+.navigation-bar {
+	background-color: #F5F5DC;
+	/* ベージュ色の背景 */
+	padding: 10px;
+	/* ナビゲーションバーの内側の余白 */
+	text-align: center;
+	/* テキストを中央寄せ */
+}
+
+.navigation-bar a {
+	background-color: #D2B48C;
+	/* 薄茶色のボタンの背景 */
+	color: #FFFFFF;
+	/* ボタンの文字色を白に */
+	padding: 8px 16px;
+	/* ボタンの内側の余白 */
+	text-decoration: none;
+	/* リンクの下線をなくす */
+	margin: 0 5px;
+	/* ボタン間の余白 */
+	border-radius: 5px;
+	/* ボタンの角を丸くする */
+}
+
+.navigation-bar a:hover {
+	background-color: #C0A584;
+	/* ボタンにマウスオーバーした時の背景色 */
+}
+
+.navigation-bar {
+	background-color: #F5F5DC;
+	padding: 10px;
+	text-align: left;
+	/* 左寄せにする */
+}
+
+/* 他のスタイルは省略 */
+
+.navigation-bar {
+	background-color: #E0F2F7;
+	/* 薄い水色の背景 */
+	padding: 10px;
+	/* ナビゲーションバーの内側の余白 */
+	text-align: left;
+	/* 左寄せ */
+}
+
+.navigation-bar .btn-custom,
+.navigation-bar a {
+	background-color: #4CAF50;
+	/* 緑色のボタンの背景 */
+	color: #FFFFFF;
+	/* ボタンの文字色を白に */
+	padding: 8px 16px;
+	/* ボタンの内側の余白 */
+	text-decoration: none;
+	/* リンクの下線をなくす */
+	margin: 5px;
+	/* ボタン間の余白 */
+	border-radius: 5px;
+	/* ボタンの角を丸くする */
+	border: none;
+	/* ボタンの枠線をなくす */
+	display: inline-block;
+	/* インラインブロック要素にする */
+}
+
+
+
+/* ボタンにマウスオーバーした時の背景色 */
+.navigation-bar .btn {
+	height: 40px;
+	/* 例: ボタンの高さを40pxに統一 */
+	display: flex;
+	align-items: center;
+	
+	
+	
+	
+}

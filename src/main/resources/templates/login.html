@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Events管理ログイン</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<div class="text-center mt-4">
+		<h1>Events管理ページ</h1>
+		<th:block th:if="${session.loggedIn}">
+			<a class="btn btn-primary btn-lg mt-4 mr-2" 
+			th:href="@{/admin}">ログイン</a>
+		</th:block>
+		
+		<th:block th:unless="${session.loggedIn}">
+			<form class="mt-4" action="" method="post" 
+			th:object="${admin}">
+				
+				<p class="mt-2">ログインID：
+					<input type="text" th:field="*{loginId}">
+				</p>
+				<p class="mt-2">パスワード：
+					<input type="password" th:field="*{loginPass}">
+				</p>
+				<input class="btn btn-outline-success" 
+				type="submit" value="ログイン">
+				
+			</form>
+		</th:block>
+	</div>
+</body>
+
+</html>
