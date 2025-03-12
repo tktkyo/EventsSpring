@@ -134,25 +134,7 @@ th {
 }
 
 
-.navigation-bar a {
-	background-color: rgb(128, 64, 0);
-	/* 薄茶色のボタンの背景 */
-	color: #FFFFFF;
-	/* ボタンの文字色を白に */
-	padding: 8px 16px;
-	/* ボタンの内側の余白 */
-	text-decoration: none;
-	/* リンクの下線をなくす */
-	margin: 0 5px;
-	/* ボタン間の余白 */
-	border-radius: 5px;
-	/* ボタンの角を丸くする */
-}
 
-.navigation-bar a:hover {
-	background-color: #C0A584;
-	/* ボタンにマウスオーバーした時の背景色 */
-}
 
 
 
@@ -186,6 +168,4 @@ th {
 }
 
 
-.navigation-bar button.date, .navigation-bar button.gift {
-    background-color: rgba(210, 180, 140, 0.7) !important; /* !importantを追加 */
-}
+
