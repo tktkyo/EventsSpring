@@ -31,9 +31,9 @@ public class AuthController {
         return "redirect:/admin";
     }
 	@GetMapping("/logout")
-	public String logout() {
+	public String logout(HttpSession session) {
 		// セッションを破棄し、トップページへ遷移
-
-		return "logout";
+session.invalidate();
+return "logout";
 	}
 }
