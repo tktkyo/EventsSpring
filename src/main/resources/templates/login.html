@@ -18,7 +18,7 @@
 
         <th:block th:unless="${session.loggedIn}">
             <form class="mt-4" action="" method="post" th:object="${admin}">
-                <p th:if="${loginError}" th:text="#{${loginError}}" class="error"></p>
+                <p th:if="${loginError == 'error.incorrect_id_password'}" th:text="#{${loginError}}" style="color: rgb(255, 0, 255) !important;"></p>
                 <span th:errors="*{loginId}" class="error"></span>
                 <p class="mt-2">ログインID：
                     <input type="text" th:field="*{loginId}">
