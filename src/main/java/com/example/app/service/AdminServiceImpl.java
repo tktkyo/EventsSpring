@@ -12,20 +12,19 @@ import lombok.RequiredArgsConstructor;
 @Service
 @Transactional(rollbackFor = Exception.class)
 @RequiredArgsConstructor
-public class AdminServiceImpl {
-	
-	private final AdminMapper mapper;
-	public boolean isCorrectIdAndPassword(String loginId, String loginPass){
-	Admin admin = mapper.selectByLoginId(loginId);
-	// ログインID が正しいかチェック
-	// ⇒ ログインID が正しくなければ、管理者データは取得されない
-	if(admin == null) {
-	return false;
-	}
-	// パスワードが正しいかチェック
-	if(!BCrypt.checkpw(loginPass, admin.getLoginPass())) {
-	return false;
-	}
-	return true;
-	}
-	}
+public class AdminServiceImpl implements AdminService {
+
+    private final AdminMapper mapper;
+    
+    public Admin findAdminByLoginId(String loginId) {
+        return mapper.selectByLoginId(loginId);
+    }
+
+    public boolean isCorrectIdAndPassword(String loginId, String loginPass) {
+        Admin admin = mapper.selectByLoginId(loginId);
+        if (admin == null || admin.getLoginPass() == null) {
+            return false;
+        }
+        return BCrypt.checkpw(loginPass, admin.getLoginPass());
+    }
+}
