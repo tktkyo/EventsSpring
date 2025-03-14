@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 .image-container {
     position: relative;
     width: 90%; /* 必要に応じて調整 */
@@ -133,23 +135,15 @@ th {
 	color: rgb(3, 141, 141);
 }
 
-
-
-
-
-
-/* 他のスタイルは省略 */
-
-
 .navigation-bar {
-    background-color: rgb(64, 128, 128);
+    background-color: rgb(66, 166, 129);
     padding: 0;
     display: flex;
     width: 100%;
 }
 
 .navigation-bar a {
-    background-color: rgb(190, 129, 14);
+    background-color: rgb(192, 192, 192);
     color: #FFFFFF;
     padding: 10px 0;
     text-decoration: none;
