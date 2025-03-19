@@ -16,29 +16,39 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lavishly+Yours&display=swap"
 		rel="stylesheet">
-		<style>
-        .pagination .page-link {
-            background-color: #e8d8c4; /* 薄茶色 */
-            border: 1px solid #d2c2ae; /* 薄茶色の境界線 */
-            color: #333; /* テキストの色 */
-        }
+	<style>
+		.pagination .page-link {
+			background-color: #e8d8c4;
+			/* 薄茶色 */
+			border: 1px solid #d2c2ae;
+			/* 薄茶色の境界線 */
+			color: #333;
+			/* テキストの色 */
+		}
 
-        .pagination .page-item.active .page-link {
-            background-color: #c0a584; /* アクティブなページの背景色 */
-            border-color: #c0a584; /* アクティブなページの境界線 */
-            color: #fff; /* アクティブなページのテキストの色 */
-        }
+		.pagination .page-item.active .page-link {
+			background-color: #c0a584;
+			/* アクティブなページの背景色 */
+			border-color: #c0a584;
+			/* アクティブなページの境界線 */
+			color: #fff;
+			/* アクティブなページのテキストの色 */
+		}
 
-        .pagination .page-link:hover {
-            background-color: #d2c2ae; /* ホバー時の背景色 */
-        }
+		.pagination .page-link:hover {
+			background-color: #d2c2ae;
+			/* ホバー時の背景色 */
+		}
 
-        .pagination .page-item.disabled .page-link {
-            background-color: #f8f9fa; /* 無効なページの背景色 */
-            border-color: #dee2e6; /* 無効なページの境界線 */
-            color: #6c757d; /* 無効なページのテキストの色 */
-        }
-    </style>
+		.pagination .page-item.disabled .page-link {
+			background-color: #f8f9fa;
+			/* 無効なページの背景色 */
+			border-color: #dee2e6;
+			/* 無効なページの境界線 */
+			color: #6c757d;
+			/* 無効なページのテキストの色 */
+		}
+	</style>
 </head>
 
 <body>
@@ -53,11 +63,16 @@
 				</div>
 				<br><br><br>
 				<div class="navigation-bar" style="display: flex; width: 100%;">
-    <button class="nav-button date" onclick="location.href='#date'" style="background-color: rgb(192, 192, 192); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">イベント日程</button>
-    <button class="nav-button" onclick="location.href='#treatment'" style="background-color: rgb(177, 130, 95); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">トリートメント内容</button>
-    <button class="nav-button gift" onclick="location.href='#gift'" style="background-color: rgb(192, 192, 192); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">ギフト</button>
-    <button class="nav-button" onclick="location.href='https://jurlique-japan.com/c/face/faceoil/121700'" style="background-color: rgb(177, 130, 95); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border: none;">製品一覧</button>
-</div>
+					<button class="nav-button date" onclick="location.href='#date'"
+						style="background-color: rgb(192, 192, 192); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">イベント日程</button>
+					<button class="nav-button" onclick="location.href='#treatment'"
+						style="background-color: rgb(177, 130, 95); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">トリートメント内容</button>
+					<button class="nav-button gift" onclick="location.href='#gift'"
+						style="background-color: rgb(192, 192, 192); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border-right: 2px solid #C0A584; border: none;">ギフト</button>
+					<button class="nav-button"
+						onclick="location.href='https://jurlique-japan.com/c/face/faceoil/121700'"
+						style="background-color: rgb(177, 130, 95); color: #FFFFFF; padding: 10px 0; text-decoration: none; flex: 1; text-align: center; border: none;">製品一覧</button>
+				</div>
 				<br><br><br>
 			</div>
 	</div>
@@ -106,7 +121,27 @@
 		<br><br>
 		<br><br>
 		<br><br>
+
+
+		<div class="mini-sample-wrapper">
+			<div class="sample-item">
+				<div class="image-container">
+					<img src="/images/miniset.png">
+				</div>
+				<p class="image-text">スターターキットミニ</p>
+			</div>
+			<div class="sample-item">
+				<div class="image-container">
+					<img src="/images/deluxpo-ti.png">
+				</div>
+				<p class="image-text">デラックスサンプル（ポーチ付き）</p>
+			</div>
+		</div>
 	</div>
+	<br><br>
+	<br><br>
+	<br><br>
+
 
 	<ul class="pagination justify-content-center">
 		<li class="page-item disabled" id="prevPage">
@@ -150,28 +185,28 @@
 			if (currentPage < totalPages) showPage(currentPage + 1);
 		});
 
-		
-    
 
-   document.querySelectorAll('.navigation-bar .nav-button').forEach(button => {
-    button.addEventListener('click', function (event) {
-        const onclickValue = this.getAttribute('onclick');
-        if (onclickValue) {
-            eval(onclickValue);
-        }
-        const targetId = this.getAttribute('onclick').match(/location\.href='#(\w+)'/);
-        if (targetId && targetId[1] === 'date') {
-            showPage(2);
-        } else if (targetId && targetId[1] === 'gift') {
-            showPage(3);
-        } else if (targetId && targetId[1] === 'treatment') {
-            showPage(2);
-        }
-    });
-});;
 
-    showPage(1); // 初期表示
-</script>
+
+		document.querySelectorAll('.navigation-bar .nav-button').forEach(button => {
+			button.addEventListener('click', function (event) {
+				const onclickValue = this.getAttribute('onclick');
+				if (onclickValue) {
+					eval(onclickValue);
+				}
+				const targetId = this.getAttribute('onclick').match(/location\.href='#(\w+)'/);
+				if (targetId && targetId[1] === 'date') {
+					showPage(2);
+				} else if (targetId && targetId[1] === 'gift') {
+					showPage(3);
+				} else if (targetId && targetId[1] === 'treatment') {
+					showPage(2);
+				}
+			});
+		});;
+
+		showPage(1); // 初期表示
+	</script>
 </body>
 
 </html>

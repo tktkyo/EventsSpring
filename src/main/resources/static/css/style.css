@@ -165,3 +165,38 @@ th {
 .eeror{
 	color:crimson;
 }
+
+.mini-sample-wrapper {
+    display: flex; /* 横並びにするためにflexboxを使用 */
+    justify-content: space-around; /* 画像の間隔を均等に配置 */
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+}
+
+.mini-sample-wrapper  .image-container img {
+    width: 50%; /* 画像の幅を親要素の50%に設定（1/4サイズ） */
+    height: auto; /* 高さを自動調整して縦横比を維持 */
+}
+
+/* 必要に応じて、画像間の余白を調整 */
+.mini-sample-wrapper .image-container {
+  padding: 5px;
+  
+  .sample-item {
+    position: relative; /* 相対配置の基準にする */
+}
+
+.sample-item .image-container {
+    position: relative; /* 重ね合わせの基準にする */
+}
+
+.sample-item .image-text {
+    position: absolute; /* 絶対配置で重ねる */
+    top: 50%; /* 垂直方向の中央に配置 */
+    left: 50%; /* 水平方向の中央に配置 */
+    transform: translate(-50%, -50%); /* 要素自体を中央に移動 */
+    color: white; /* 文字色を白に設定（必要に応じて変更） */
+    font-size: 16px; /* 文字サイズを調整（必要に応じて変更） */
+    text-align: center; /* 文字を中央揃え */
+    width: 100%; /* 幅を親要素に合わせる */
+}
+}
